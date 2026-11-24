@@ -35,13 +35,14 @@ def init():
     global balls
     balls = [Ball(random.randint(100,1700),60,0) for i in range(30)]
     
-    zombies = [Zombie() for _ in range(4)]
-    game_world.add_objects(zombies,1)
+    zombies = Zombie()
+    
 
     game_world.add_objects(balls,1)
     game_world.add_oject(grass, 0)
     game_world.add_oject(boy)
-
+    game_world.add_oject(zombies,1)
+    
     # 소년과 볼 사이의 충돌 페어를 등록
     game_world.add_collision_pair("boy:ball",boy,None)
     for ball in balls:
