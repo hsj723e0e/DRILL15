@@ -196,4 +196,6 @@ class Boy:
             # 소년이 공과 충돌했을 때의 처리
             self.ball_count += 1
             game_world.remove_object(other)  # 충돌한 공을 제거
+        if group == "boy:zombie":
+            game_framework.quit()
     
